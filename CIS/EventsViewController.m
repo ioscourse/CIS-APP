@@ -13,7 +13,7 @@
 @end
 
 @implementation EventsViewController
-@synthesize webview,am;
+@synthesize webview,am,refresh;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -64,6 +64,11 @@
 - (void)dealloc {
     [webview release];
     [am release];
-    [super dealloc];
+    [refresh release];
+       [super dealloc];
+}
+- (IBAction)refesh:(id)sender {
+   [self LoadPage];
+
 }
 @end

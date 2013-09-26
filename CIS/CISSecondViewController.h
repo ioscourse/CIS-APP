@@ -19,4 +19,8 @@
 
 @property (retain, nonatomic) IBOutlet UIWebView *webview;
 
+@property (retain, nonatomic) IBOutlet UIBarButtonItem *refresh;
+- (IBAction)refresh:(id)sender;
+
+
 @end

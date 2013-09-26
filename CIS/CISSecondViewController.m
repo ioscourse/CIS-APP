@@ -13,7 +13,7 @@
 @end
 
 @implementation CISSecondViewController
-@synthesize picker,webview;
+@synthesize picker,webview,refresh;
 
 - (void)viewDidLoad
 {
@@ -44,6 +44,9 @@
 - (void)dealloc {
     [picker release];
     [webview release];
+   
+    [refresh release];
+   
     [super dealloc];
 }
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -69,5 +72,9 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:rtfUrl];
     [webview loadRequest:request];
     NSLog(@"Selected Class: %@. Index of selected Class: %i", [files objectAtIndex:row], row);
+}
+
+- (IBAction)refresh:(id)sender {
+        [self LoadPage];
 }
 @end

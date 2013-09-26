@@ -12,4 +12,7 @@
 @property (retain, nonatomic) IBOutlet UIWebView *webview;
 @property (retain, nonatomic) IBOutlet UIActivityIndicatorView *am;
 
+- (IBAction)refesh:(id)sender;
+@property (retain, nonatomic) IBOutlet UINavigationItem *refresh;
+
 @end
