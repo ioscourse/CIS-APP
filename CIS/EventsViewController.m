@@ -32,9 +32,7 @@
 {
     
     [super viewDidLoad];
-     [self.webview setDelegate:self];
-    // I do this because I'm in landscape mode
-   // spinner is not visible until started
+     [self.webview setDelegate:self]; //keeps track of all web activity
     [self LoadPage];
   
 }
