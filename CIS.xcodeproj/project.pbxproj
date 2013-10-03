@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		124552AE17FBCBE6004A3E5B /* CISVideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124552AD17FBCBE6004A3E5B /* CISVideoDetailViewController.m */; };
-		124552B417FBCD0F004A3E5B /* CISMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124552B317FBCD0F004A3E5B /* CISMasterViewController.m */; };
 		125D569F17F3104B0058F55F /* web.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 125D569E17F3104B0058F55F /* web.rtf */; };
 		125D56A117F310EF0058F55F /* data.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 125D56A017F310EF0058F55F /* data.rtf */; };
 		125D56A317F3114D0058F55F /* cis.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 125D56A217F3114D0058F55F /* cis.rtf */; };
@@ -58,10 +56,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		124552AC17FBCBE6004A3E5B /* CISVideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CISVideoDetailViewController.h; sourceTree = "<group>"; };
-		124552AD17FBCBE6004A3E5B /* CISVideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CISVideoDetailViewController.m; sourceTree = "<group>"; };
-		124552B217FBCD0F004A3E5B /* CISMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CISMasterViewController.h; sourceTree = "<group>"; };
-		124552B317FBCD0F004A3E5B /* CISMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CISMasterViewController.m; sourceTree = "<group>"; };
 		125D569E17F3104B0058F55F /* web.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = web.rtf; sourceTree = "<group>"; };
 		125D56A017F310EF0058F55F /* data.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = data.rtf; sourceTree = "<group>"; };
 		125D56A217F3114D0058F55F /* cis.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = cis.rtf; sourceTree = "<group>"; };
@@ -151,10 +145,6 @@
 		1281340917E1DB1400C51FA4 = {
 			isa = PBXGroup;
 			children = (
-				124552B217FBCD0F004A3E5B /* CISMasterViewController.h */,
-				124552B317FBCD0F004A3E5B /* CISMasterViewController.m */,
-				124552AC17FBCBE6004A3E5B /* CISVideoDetailViewController.h */,
-				124552AD17FBCBE6004A3E5B /* CISVideoDetailViewController.m */,
 				1272202B17F44C72006CE7F6 /* CISJobsViewController.h */,
 				1272202C17F44C72006CE7F6 /* CISJobsViewController.m */,
 				127F2D3E17F3A3B40042EFCA /* CISVideoViewController.h */,
@@ -350,7 +340,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				124552AE17FBCBE6004A3E5B /* CISVideoDetailViewController.m in Sources */,
 				1281342217E1DB1400C51FA4 /* main.m in Sources */,
 				127F2D3D17F3A1510042EFCA /* ContactViewController.m in Sources */,
 				127F2D3417F38A5B0042EFCA /* EventsViewController.m in Sources */,
@@ -358,7 +347,6 @@
 				127F2D4017F3A3B40042EFCA /* CISVideoViewController.m in Sources */,
 				1281343217E1DB1400C51FA4 /* CISFirstViewController.m in Sources */,
 				1272202D17F44C72006CE7F6 /* CISJobsViewController.m in Sources */,
-				124552B417FBCD0F004A3E5B /* CISMasterViewController.m in Sources */,
 				1281343917E1DB1400C51FA4 /* CISSecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,7 +437,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CIS/CIS-Prefix.pch";
 				INFOPLIST_FILE = "CIS/CIS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -465,7 +453,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CIS/CIS-Prefix.pch";
 				INFOPLIST_FILE = "CIS/CIS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

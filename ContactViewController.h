@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContactViewController : UIViewController
+@interface ContactViewController : UIViewController  <UIWebViewDelegate>
 
 @property (retain, nonatomic) IBOutlet UIWebView *webview;
+@property (retain, nonatomic) IBOutlet UIActivityIndicatorView *am2;
 @end

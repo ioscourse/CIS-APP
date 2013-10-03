@@ -13,16 +13,8 @@
 @end
 
 @implementation ContactViewController
-@synthesize webview;
+@synthesize webview,am2;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -32,12 +24,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+     [self.webview setDelegate:self]; //keeps track of all web activity
     [self LoadPage];
 	// Do any additional setup after loading the view.
 }
-
+-(void) webViewDidFinishLoad:(UIWebView *)webView
+{
+    NSString *javaScript = @"function myFunction(){return 1+1;}";
+    [webView stringByEvaluatingJavaScriptFromString:javaScript];
+    [am2 stopAnimating];
+    //Has fully loaded, do whatever you want here
+}
 - (void) LoadPage
 {
+     [am2 startAnimating];
     NSURL *myUrl = [NSURL URLWithString:@"http://form.jotform.us/form/22908822234150"];
     NSURLRequest *request = [NSURLRequest requestWithURL:myUrl];
     [webview loadRequest:request];
@@ -51,6 +51,7 @@
 
 - (void)dealloc {
     [webview release];
+     [am2 release];
     [super dealloc];
 }
 @end
