@@ -18,15 +18,45 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self LoadPage];
+    if([self checkinternet] == NO)
+    {
+        // Not connected to the internet
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Internet Connection Required"
+                                                          message:@"Close app and return when internet connection available."
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+        [message show];
+    }
+    else
+    {
+        [self LoadPage];
+        
+    }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
      [self.webview setDelegate:self]; //keeps track of all web activity
-    [self LoadPage];
+    //[self LoadPage];
 	// Do any additional setup after loading the view.
+}
+- (BOOL) checkinternet
+{
+    NSURL *scriptUrl = [NSURL URLWithString:@"http://www.google.com/m"];
+    NSData *data = [NSData dataWithContentsOfURL:scriptUrl];
+    if (data)
+    {
+        NSLog(@"Device is connected to the internet");
+        return YES;
+    }
+    else
+    {
+        NSLog(@"Device is not connected to the internet");
+        return NO;
+    }
+    
 }
 -(void) webViewDidFinishLoad:(UIWebView *)webView
 {
@@ -37,10 +67,14 @@
 }
 - (void) LoadPage
 {
-     [am2 startAnimating];
-    NSURL *myUrl = [NSURL URLWithString:@"http://form.jotform.us/form/22908822234150"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:myUrl];
-    [webview loadRequest:request];
+    
+        [am2 startAnimating];
+        NSURL *myUrl = [NSURL URLWithString:@"http://form.jotform.us/form/22908822234150"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:myUrl];
+        [webview loadRequest:request];
+        
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

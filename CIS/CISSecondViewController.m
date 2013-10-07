@@ -18,20 +18,40 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self LoadPage];
-   }
+    [self.webview setDelegate:self]; //keeps track of all web activity
+
+   // [self LoadPage];
+}
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self LoadPage];
+    if([self checkinternet] == NO)
+    {
+        // Not connected to the internet
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Internet Connection Required"
+                                                          message:@"Close app and return when internet connection available."
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+        [message show];
+    }
+    else
+    {
+        [self LoadPage];
+        
+    }
+
 }
 - (void) LoadPage
 {
-    list = [[NSArray alloc] initWithObjects:@"CIS", @"Cisco", @"Data Assurance", @"Web", nil];
-    files = [[NSArray alloc] initWithObjects:@"cis", @"cisco", @"data", @"web", nil];
-	// Do any additional setup after loading the view, typically from a nib.
-    NSURL *rtfUrl = [[NSBundle mainBundle] URLForResource:@"cis" withExtension:@".rtf"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:rtfUrl];
-    [webview loadRequest:request];
+    
+        list = [[NSArray alloc] initWithObjects:@"CIS", @"Cisco", @"Data Assurance", @"Web", nil];
+        files = [[NSArray alloc] initWithObjects:@"cis", @"cisco", @"data", @"web", nil];
+        // Do any additional setup after loading the view, typically from a nib.
+        NSURL *rtfUrl = [[NSBundle mainBundle] URLForResource:@"cis" withExtension:@".rtf"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:rtfUrl];
+        [webview loadRequest:request];
+         [picker reloadAllComponents];
+
     
 }
 
@@ -40,7 +60,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (BOOL) checkinternet
+{
+    NSURL *scriptUrl = [NSURL URLWithString:@"http://www.google.com/m"];
+    NSData *data = [NSData dataWithContentsOfURL:scriptUrl];
+    if (data)
+    {
+        NSLog(@"Device is connected to the internet");
+        return YES;
+    }
+    else
+    {
+        NSLog(@"Device is not connected to the internet");
+        return NO;
+    }
+    
+}
 - (void)dealloc {
     [picker release];
     [webview release];

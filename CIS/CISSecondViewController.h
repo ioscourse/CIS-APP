@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CISSecondViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface CISSecondViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate,UIWebViewDelegate>
 {
     NSArray *list;
     NSArray *files;

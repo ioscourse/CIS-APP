@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CISJobsViewController : UIViewController
+@interface CISJobsViewController : UIViewController <UIWebViewDelegate>
 @property (retain, nonatomic) IBOutlet UIWebView *webview;
 
 @end

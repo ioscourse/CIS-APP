@@ -25,15 +25,45 @@
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self LoadPage];
-}
+    if([self checkinternet] == NO)
+    {
+        // Not connected to the internet
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Internet Connection Required"
+                                                          message:@"Close app and return when internet connection available."
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+        [message show];
+    }
+    else
+    {
+        [self LoadPage];
 
+    }
+
+}
+- (BOOL) checkinternet
+{
+    NSURL *scriptUrl = [NSURL URLWithString:@"http://www.google.com/m"];
+    NSData *data = [NSData dataWithContentsOfURL:scriptUrl];
+    if (data)
+    {
+        NSLog(@"Device is connected to the internet");
+        return YES;
+    }
+    else
+    {
+        NSLog(@"Device is not connected to the internet");
+        return NO;
+    }
+    
+}
 - (void)viewDidLoad
 {
     
     [super viewDidLoad];
      [self.webview setDelegate:self]; //keeps track of all web activity
-    [self LoadPage];
+    //[self LoadPage];
   
 }
 -(void) webViewDidFinishLoad:(UIWebView *)webView
@@ -45,10 +75,13 @@
 }
 - (void) LoadPage
 {
-   [am startAnimating];
-    NSURL *myUrl = [NSURL URLWithString:@"https://sites.google.com/site/ioscisapp/home"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:myUrl];
-    [webview loadRequest:request];
+  
+        [am startAnimating];
+        NSURL *myUrl = [NSURL URLWithString:@"https://sites.google.com/site/ioscisapp/home"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:myUrl];
+        [webview loadRequest:request];
+  
+  
   
     //am.hidden = YES;
 }
