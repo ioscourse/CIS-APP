@@ -17,10 +17,11 @@
 
 @property (retain, nonatomic) IBOutlet UIPickerView *picker;
 
-@property (retain, nonatomic) IBOutlet UIWebView *webview;
+
 
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *refresh;
 - (IBAction)refresh:(id)sender;
 
+@property (retain, nonatomic) IBOutlet UITextView *textview;
 
 @end

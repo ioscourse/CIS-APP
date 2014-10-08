@@ -13,7 +13,7 @@
 @end
 
 @implementation CISFirstViewController
-@synthesize webview;
+
 
 - (void)viewDidLoad
 {
@@ -42,9 +42,11 @@
 - (void) LoadPage
 {
     
-        NSURL *rtfUrl = [[NSBundle mainBundle] URLForResource:@"home" withExtension:@".rtf"];
-        NSURLRequest *request = [NSURLRequest requestWithURL:rtfUrl];
-        [webview loadRequest:request];
+
+    
+    NSURL *rtfPath = [[NSBundle mainBundle] URLForResource: @"home" withExtension:@"rtf"];
+    NSAttributedString *attributedStringWithRtf = [[NSAttributedString alloc]   initWithFileURL:rtfPath options:@{NSDocumentTypeDocumentAttribute:NSRTFTextDocumentType} documentAttributes:nil error:nil];
+    self.textview.attributedText=attributedStringWithRtf;
 
 
    
@@ -71,7 +73,7 @@
        
 }
 - (void)dealloc {
-    [webview release];
+    [_textview release];
     [super dealloc];
 }
 @end

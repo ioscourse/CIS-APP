@@ -12,20 +12,24 @@
 	<dict>
 		<key>92CF3E8B-8368-4639-81E2-4CE73353706F</key>
 		<string>https://github.com/ioscourse/CIS-APP.git</string>
+		<key>B641F489BFA245E0EAEAA7D35E5A07B75891A8BB</key>
+		<string>https://github.com/ioscourse/CIS-APP.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CIS.xcodeproj/project.xcworkspace</string>
+	<string>CIS.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>92CF3E8B-8368-4639-81E2-4CE73353706F</key>
+		<string>../../../CIS</string>
+		<key>B641F489BFA245E0EAEAA7D35E5A07B75891A8BB</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/ioscourse/CIS-APP.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>92CF3E8B-8368-4639-81E2-4CE73353706F</string>
+	<string>B641F489BFA245E0EAEAA7D35E5A07B75891A8BB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>92CF3E8B-8368-4639-81E2-4CE73353706F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CIS</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B641F489BFA245E0EAEAA7D35E5A07B75891A8BB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CIS-APP</string>
 		</dict>
 	</array>
 </dict>

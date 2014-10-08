@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CISFirstViewController : UIViewController
-@property (retain, nonatomic) IBOutlet UIWebView *webview;
+
+@property (retain, nonatomic) IBOutlet UITextView *textview;
 
 @end

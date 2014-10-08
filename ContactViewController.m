@@ -38,7 +38,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     [self.webview setDelegate:self]; //keeps track of all web activity
+    // [self.webview setDelegate:self]; //keeps track of all web activity
     //[self LoadPage];
 	// Do any additional setup after loading the view.
 }
@@ -72,7 +72,8 @@
         NSURL *myUrl = [NSURL URLWithString:@"http://form.jotform.us/form/22908822234150"];
         NSURLRequest *request = [NSURLRequest requestWithURL:myUrl];
         [webview loadRequest:request];
-        
+    
+    
     
     
 }
@@ -86,6 +87,7 @@
 - (void)dealloc {
     [webview release];
      [am2 release];
+
     [super dealloc];
 }
 @end

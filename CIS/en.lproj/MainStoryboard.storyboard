@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--First View Controller - First-->
+        <!--First-->
         <scene sceneID="11">
             <objects>
                 <viewController title="First" id="2" customClass="CISFirstViewController" sceneMemberID="viewController">
@@ -17,25 +17,28 @@
                                 <rect key="frame" x="0.0" y="20" width="283" height="251"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="aPw-yb-57c">
-                                <rect key="frame" x="286" y="24" width="276.99999999999994" height="241"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="24T-9P-aDc">
+                                <rect key="frame" x="291" y="20" width="270" height="251"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home.png" id="7"/>
                     <connections>
-                        <outlet property="webview" destination="aPw-yb-57c" id="c9z-f1-n2I"/>
+                        <outlet property="textview" destination="24T-9P-aDc" id="bei-p2-aDT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-79" y="-1238"/>
         </scene>
-        <!--Video View Controller - Videos-->
+        <!--Videos-->
         <scene sceneID="PX3-Zm-25r">
             <objects>
                 <viewController id="lI2-Ct-ruv" customClass="CISVideoViewController" sceneMemberID="viewController">
@@ -56,7 +59,7 @@
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" keyboardDisplayRequiresUserAction="NO" id="SAp-68-ZBj">
-                                <rect key="frame" x="380" y="98" width="182.99999999999997" height="173"/>
+                                <rect key="frame" x="380" y="98" width="183" height="173"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
@@ -76,7 +79,6 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Videos" image="film.png" id="eoh-tG-fSo"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -91,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="561" y="-818"/>
         </scene>
-        <!--Events View Controller - Social-->
+        <!--Social-->
         <scene sceneID="xj1-jB-x6B">
             <objects>
                 <viewController id="Ijd-Gl-JYe" customClass="EventsViewController" sceneMemberID="viewController">
@@ -125,7 +127,6 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Social" image="calendar.png" id="sgk-vV-Ehw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -139,7 +140,7 @@
             </objects>
             <point key="canvasLocation" x="-790" y="-828"/>
         </scene>
-        <!--Jobs View Controller - Jobs-->
+        <!--Jobs-->
         <scene sceneID="0Vb-YL-O7U">
             <objects>
                 <viewController id="5Ot-gh-Vbh" customClass="CISJobsViewController" sceneMemberID="viewController">
@@ -155,7 +156,6 @@
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Jobs" image="coding.png" id="Rl1-ii-n8Y"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -168,7 +168,7 @@
             </objects>
             <point key="canvasLocation" x="-92" y="-1650"/>
         </scene>
-        <!--Contact View Controller - Advisor-->
+        <!--Advisor-->
         <scene sceneID="XUW-DF-TyC">
             <objects>
                 <viewController id="jMl-Zo-yLS" customClass="ContactViewController" sceneMemberID="viewController">
@@ -197,7 +197,6 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Advisor" image="man.png" id="FBl-Nk-Ga3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -210,7 +209,7 @@
             </objects>
             <point key="canvasLocation" x="-79" y="-807"/>
         </scene>
-        <!--Second View Controller - Second-->
+        <!--Second-->
         <scene sceneID="13">
             <objects>
                 <viewController title="Second" id="3" customClass="CISSecondViewController" sceneMemberID="viewController">
@@ -226,12 +225,6 @@
                                     <outlet property="delegate" destination="3" id="oBf-1D-QyW"/>
                                 </connections>
                             </pickerView>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" keyboardDisplayRequiresUserAction="NO" id="zB1-Ah-YcX">
-                                <rect key="frame" x="160" y="61" width="408" height="207"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </webView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Degree" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RZl-J3-dGJ">
                                 <rect key="frame" x="-2" y="81" width="161" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
@@ -252,15 +245,23 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="8Gr-Dc-jg7">
+                                <rect key="frame" x="167" y="61" width="401" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Degrees" image="graduation-cap.png" id="6"/>
                     <connections>
                         <outlet property="picker" destination="4bo-lp-0ob" id="ptH-pi-jlZ"/>
                         <outlet property="refresh" destination="oa9-on-SCL" id="UTa-SH-hgp"/>
-                        <outlet property="webview" destination="zB1-Ah-YcX" id="YUi-85-Ryy"/>
+                        <outlet property="textview" destination="8Gr-Dc-jg7" id="86L-jO-E6D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
