@@ -45,14 +45,14 @@
 {
     
         list = [[NSArray alloc] initWithObjects:@"CIS", @"Cisco", @"Data Assurance", @"Web", nil];
-        files = [[NSArray alloc] initWithObjects:@"cis", @"cisco", @"data", @"web", nil];
+        files = [[NSArray alloc] initWithObjects:@"https://sites.google.com/site/ioscisapp/cis", @"https://sites.google.com/site/ioscisapp/cisco", @"https://sites.google.com/site/ioscisapp/data", @"https://sites.google.com/site/ioscisapp/web", nil];
         // Do any additional setup after loading the view, typically from a nib.
-    NSURL *rtfPath = [[NSBundle mainBundle] URLForResource: @"cis" withExtension:@"rtf"];
-    NSAttributedString *attributedStringWithRtf = [[NSAttributedString alloc]   initWithFileURL:rtfPath options:@{NSDocumentTypeDocumentAttribute:NSRTFTextDocumentType} documentAttributes:nil error:nil];
-    self.textview.attributedText=attributedStringWithRtf;
-     //   [webview loadRequest:request];
-         [picker reloadAllComponents];
- 
+  
+
+    NSURL *myUrl = [NSURL URLWithString:@"https://sites.google.com/site/ioscisapp/cis"];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:myUrl];
+    [self.webview loadRequest:request];
     
 }
 
@@ -83,7 +83,8 @@
    
     [refresh release];
    
-    [_textview release];
+
+    [_webview release];
     [super dealloc];
 }
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -109,9 +110,11 @@
  //   NSURLRequest *request = [NSURLRequest requestWithURL:rtfUrl];
 //    [webview loadRequest:request];
     
-    NSURL *rtfPath = [[NSBundle mainBundle] URLForResource:[files objectAtIndex:row] withExtension:@".rtf"];
-    NSAttributedString *attributedStringWithRtf = [[NSAttributedString alloc]   initWithFileURL:rtfPath options:@{NSDocumentTypeDocumentAttribute:NSRTFTextDocumentType} documentAttributes:nil error:nil];
-    self.textview.attributedText=attributedStringWithRtf;
+    
+    NSURL *myUrl = [NSURL URLWithString:[files objectAtIndex:row]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:myUrl];
+    [self.webview loadRequest:request];
+
     
     NSLog(@"Selected Class: %@. Index of selected Class: %li", [files objectAtIndex:row], (long)row);
 }

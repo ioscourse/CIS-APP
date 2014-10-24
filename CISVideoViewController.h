@@ -14,8 +14,7 @@
 }
 
 @property (retain, nonatomic) IBOutlet UIWebView *webview1;
-@property (retain, nonatomic) IBOutlet UIWebView *webview3;
-@property (retain, nonatomic) IBOutlet UIWebView *webview2;
+
 @property (retain, nonatomic) IBOutlet UIActivityIndicatorView *am;
 
 @end

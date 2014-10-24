@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CISFirstViewController : UIViewController
+@interface CISFirstViewController : UIViewController <UIWebViewDelegate>
 
-@property (retain, nonatomic) IBOutlet UITextView *textview;
+@property (retain, nonatomic) IBOutlet UIWebView *webview;
+
 
 @end

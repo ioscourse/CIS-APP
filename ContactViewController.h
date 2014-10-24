@@ -13,7 +13,8 @@
 @property (retain, nonatomic) IBOutlet UIWebView *webview;
 @property (retain, nonatomic) IBOutlet UIActivityIndicatorView *am2;
 
+@property (retain, nonatomic) IBOutlet UIScrollView *scrolllview;
 
-
+-(IBAction) doneEditing:(id) sender;
 
 @end

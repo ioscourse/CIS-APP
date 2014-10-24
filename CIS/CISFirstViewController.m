@@ -18,6 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
   //  [self LoadPage];
    	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -42,11 +43,12 @@
 - (void) LoadPage
 {
     
-
+  [self.webview setDelegate:self];
     
-    NSURL *rtfPath = [[NSBundle mainBundle] URLForResource: @"home" withExtension:@"rtf"];
-    NSAttributedString *attributedStringWithRtf = [[NSAttributedString alloc]   initWithFileURL:rtfPath options:@{NSDocumentTypeDocumentAttribute:NSRTFTextDocumentType} documentAttributes:nil error:nil];
-    self.textview.attributedText=attributedStringWithRtf;
+    NSURL *myUrl = [NSURL URLWithString:@"https://sites.google.com/site/ioscisapp/index"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:myUrl];
+    [self.webview loadRequest:request];
+
 
 
    
@@ -73,7 +75,8 @@
        
 }
 - (void)dealloc {
-    [_textview release];
+
+    [_webview release];
     [super dealloc];
 }
 @end

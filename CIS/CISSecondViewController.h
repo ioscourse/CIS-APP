@@ -22,6 +22,7 @@
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *refresh;
 - (IBAction)refresh:(id)sender;
 
-@property (retain, nonatomic) IBOutlet UITextView *textview;
+@property (retain, nonatomic) IBOutlet UIWebView *webview;
+
 
 @end

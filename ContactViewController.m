@@ -14,6 +14,9 @@
 
 @implementation ContactViewController
 @synthesize webview,am2;
+-(IBAction) doneEditing:(id) sender {
+    [sender resignFirstResponder];
+}
 
 
 -(void)viewWillAppear:(BOOL)animated
@@ -34,11 +37,19 @@
         
     }
 }
-
+-(void)dismissKeyboard {
+    // add textfields and textviews
+    [webview resignFirstResponder];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // [self.webview setDelegate:self]; //keeps track of all web activity
+     [self.webview setDelegate:self]; //keeps track of all web activity
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
     //[self LoadPage];
 	// Do any additional setup after loading the view.
 }
@@ -88,6 +99,8 @@
     [webview release];
      [am2 release];
 
+    [_scrolllview release];
     [super dealloc];
 }
+
 @end

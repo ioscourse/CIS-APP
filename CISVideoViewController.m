@@ -13,7 +13,7 @@
 @end
 
 @implementation CISVideoViewController
-@synthesize webview1,webview2,webview3,am;
+@synthesize webview1,am;
 
 
 -(void)viewWillAppear:(BOOL)animated
@@ -41,8 +41,7 @@
 {
     [super viewDidLoad];
       [self.webview1 setDelegate:self];
-     [self.webview2 setDelegate:self];
-     [self.webview3 setDelegate:self];
+
    // [self LoadPage];
 	// Do any additional setup after loading the view.
 }
@@ -53,21 +52,7 @@
     [am stopAnimating];
     //Has fully loaded, do whatever you want here
 }
-- (void) setupMainView_iPhone
-{
-    [webview1 setAllowsInlineMediaPlayback:YES];
-    [webview2 setAllowsInlineMediaPlayback:YES];
-    [webview3 setAllowsInlineMediaPlayback:YES];
-    NSString *code = @"<iframe webkit-playsinline width=\"680\" height=\"383\" src=\"http://www.youtube.com/embed/mlMiQONvxCA?feature=player_detailpage\" frameborder=\"0\" allowfullscreen></iframe><br><font size=\"20\">MyCIS</font>";
-    [[self webview1]loadHTMLString:code baseURL:nil];
-    
-    NSString *code2 = @"<iframe webkit-playsinline width=\"680\" height=\"383\" src=\"http://www.youtube.com/embed/j-vcZqTWKuc?feature=player_detailpage\" frameborder=\"0\" allowfullscreen></iframe><br><font size=\"20\">Student Apps!</font>";
-    [[self webview2]loadHTMLString:code2 baseURL:nil];
-    
-    NSString *code3 = @"<iframe webkit-playsinline width=\"680\" height=\"383\" src=\"http://www.youtube.com/embed/7XeYggGAxj0?feature=player_detailpage\" frameborder=\"0\" allowfullscreen></iframe><br><font size=\"20\">Cisco</font>";
-    [[self webview3]loadHTMLString:code3 baseURL:nil];
 
-}
 - (BOOL) checkinternet
 {
     NSURL *scriptUrl = [NSURL URLWithString:@"http://www.google.com/m"];
@@ -84,36 +69,15 @@
     }
     
 }
-- (void) setupMainView_iPad
-{
-    [webview1 setAllowsInlineMediaPlayback:YES];
-      [webview2 setAllowsInlineMediaPlayback:YES];
-      [webview3 setAllowsInlineMediaPlayback:YES];
-    NSString *code = @"<iframe webkit-playsinline width=\"960\" height=\"720\" src=\"http://www.youtube.com/embed/mlMiQONvxCA?feature=player_detailpage\" frameborder=\"0\" allowfullscreen></iframe><br><font size=\"20\">MyCIS</font>";
-    [[self webview1]loadHTMLString:code baseURL:nil];
-    
-    NSString *code2 = @"<iframe webkit-playsinline width=\"960\" height=\"720\" src=\"http://www.youtube.com/embed/j-vcZqTWKuc?feature=player_detailpage\"  frameborder=\"0\" allowfullscreen></iframe><br><font size=\"20\">Student Apps!</font>";
-    [[self webview2]loadHTMLString:code2 baseURL:nil];
-    
-    NSString *code3 = @"<iframe webkit-playsinline width=\"960\" height=\"720\" src=\"http://www.youtube.com/embed/7XeYggGAxj0?feature=player_detailpage\" frameborder=\"0\" allowfullscreen></iframe><br><font size=\"20\">Cisco</font>";
-    [[self webview3]loadHTMLString:code3 baseURL:nil];
 
-}
 - (void) LoadPage
 {
     
         [am startAnimating];
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-            
-            [self setupMainView_iPhone];
-            
-        }
-        
-        else {
-            
-            [self setupMainView_iPad];
-            
-        }
+  
+    NSURL *myUrl = [NSURL URLWithString:@"https://sites.google.com/site/ioscisapp/video"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:myUrl];
+    [self.webview1 loadRequest:request];
 
         
    
@@ -130,8 +94,7 @@
  
    
     [webview1 release];
-    [webview3 release];
-    [webview2 release];
+ 
     [am release];
     [super dealloc];
 }
