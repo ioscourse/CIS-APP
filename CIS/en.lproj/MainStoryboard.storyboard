@@ -42,12 +42,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" keyboardDisplayRequiresUserAction="NO" id="KWn-cA-AWb">
-                                <rect key="frame" x="0.0" y="62" width="579" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
-                            </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="PXH-PS-U4Z">
                                 <rect key="frame" x="265" y="141" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -61,6 +55,12 @@
                                     <navigationItem title="Videos" id="wPd-ez-kJO"/>
                                 </items>
                             </navigationBar>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" keyboardDisplayRequiresUserAction="NO" id="KWn-cA-AWb">
+                                <rect key="frame" x="0.0" y="62" width="579" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -164,23 +164,17 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="color" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="7rd-0P-mqB">
-                                <rect key="frame" x="-20" y="38" width="608" height="248"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <webView contentMode="scaleToFill" scalesPageToFit="YES" id="b3N-QU-cYp">
-                                        <rect key="frame" x="20" y="0.0" width="568" height="240"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <dataDetectorType key="dataDetectorTypes"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="jMl-Zo-yLS" id="64H-3e-Hrc"/>
-                                        </connections>
-                                    </webView>
-                                </subviews>
-                            </scrollView>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="b3N-QU-cYp">
+                                <rect key="frame" x="0.0" y="62" width="579" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jMl-Zo-yLS" id="64H-3e-Hrc"/>
+                                </connections>
+                            </webView>
                             <navigationBar contentMode="scaleToFill" id="17o-rt-d3S">
-                                <rect key="frame" x="-1" y="-6" width="568" height="44"/>
+                                <rect key="frame" x="-1" y="17" width="568" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Advisor" id="cc1-fB-dnH"/>
@@ -193,7 +187,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="am2" destination="zZs-mO-nEj" id="f3L-TU-26J"/>
-                        <outlet property="scrolllview" destination="7rd-0P-mqB" id="Kzg-xr-hSi"/>
                         <outlet property="webview" destination="b3N-QU-cYp" id="fOA-Um-1KN"/>
                     </connections>
                 </viewController>
