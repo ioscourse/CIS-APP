@@ -9,44 +9,11 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIcons</key>
-	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>cis80x80</string>
-				<string>cis58x58</string>
-				<string>cis29z29</string>
-				<string>cis120x120</string>
-				<string>cis114x114</string>
-				<string>cis57x57</string>
-			</array>
-		</dict>
-	</dict>
+	<dict/>
 	<key>CFBundleIcons~ipad</key>
-	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>cis58x58</string>
-				<string>cis29z29</string>
-				<string>cis80x80</string>
-				<string>cis40x40</string>
-				<string>cis100x100</string>
-				<string>cis50x50</string>
-				<string>cis152x152</string>
-				<string>cis76x76</string>
-				<string>cis144x144</string>
-				<string>cis72x72</string>
-				<string>cis120x120</string>
-				<string>cis114x114</string>
-				<string>cis57x57</string>
-			</array>
-		</dict>
-	</dict>
+	<dict/>
 	<key>CFBundleIdentifier</key>
-	<string>com.ckonkol.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -54,19 +21,28 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0</string>
+	<string>3.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>2.1</string>
+	<string>3.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UILaunchStoryboardName</key>
+	<string>MainStoryboard</string>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>
